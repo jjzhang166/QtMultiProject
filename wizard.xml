@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wizard version="1" kind="project"
+        class="qmakeproject" firstpage="10"
+        id="QtMultiProject" category="QtMultiProject">
+    <icon>ProjectIcon.png</icon>
+    <description>Create a complex multi project with Qt Engineering</description>
+    <displayname>QtMultiProject</displayname>;
+    <displaycategory>QtMultiProject</displaycategory>
+    <files>
+        <file source="project.pro" target="%ProjectName%.pro" openproject="true"/>
+        <file source="SettingConfig.pri" openeditor="false" />
+    		<file source="Setting/BuildConfig.pri" openeditor="false" />
+    		<file source="Setting/LibraryConfig.pri" openeditor="false" />
+    		<file source="Project/Project.pro" openproject="false" />
+    		<file source="Setting/LibrarySetting/README" openeditor="false" />
+    		file source="Setting/LibrarySetting/VLD.pri" openeditor="false" />
+    </files>
+</wizard>
