@@ -40,6 +40,7 @@ contains(TEMPLATE,lib) {
 	    QMAKE_RPATHDIR += $$PROJECT_LIB
 	}
     } else {
+	DEFINES += DLL
 	win32 {
 	    DESTDIR = $$PROJECT_LIB
 	    DLLDESTDIR = $$PROJECT_BIN
