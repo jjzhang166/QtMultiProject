@@ -1,5 +1,6 @@
 
-CONFIG += warn_on thread c++11 rtti exceptions
+CONFIG += warn_on thread rtti exceptions
+QMAKE_CXXFLAGS += -std=c++11
 
 PROJECT_LIB = $$PWD/../Lib
 
