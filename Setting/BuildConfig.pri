@@ -1,6 +1,7 @@
 
 CONFIG += warn_on thread rtti exceptions
 QMAKE_CXXFLAGS += -std=c++11
+QMAKE_CFLAGS += -std=c11
 
 PROJECT_LIB = $$PWD/../Lib
 
@@ -68,4 +69,15 @@ CONFIG(GCC,MSVC|GCC) {
     }
 } else {
     error("Compiler configuration environment is not correct.")
+}
+
+USE_OPENMP {
+    CONFIG(GCC,MSVC|GCC) {
+        QMAKE_CFLAGS += -fopenmp
+        QMAKE_CXXFLAGS += -fopenmp
+    }
+    else:CONFIG(MSVC,MSVC|GCC) {
+        QMAKE_CFLAGS += /openmp
+        QMAKE_CXXFLAGS += /openmp
+    }
 }
